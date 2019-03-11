@@ -30,7 +30,7 @@ const GL = {
     'fore-back-list',
   ],
 
-  DEFAULT_ENGINE: 'Default',
+  DEFAULT_ENGINE: 'Default search engine',
 
   getKeyName(cProduct) {
     return cProduct.join('>')
