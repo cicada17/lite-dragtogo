@@ -1,0 +1,47 @@
+{
+
+  "manifest_version": 2,
+  "name": "Lite DragToGO",
+  "version": "0.8",
+  "homepage_url": "https://github.com/cicada17/lite-dragtogo",
+  "description": "Drag text to search (in browser search engine) or link to open in foreground/background/same page... and more.",
+
+  "permissions": [
+    "tabs",
+    "search",
+    "storage"
+  ],
+
+  "content_scripts": [{
+    "all_frames": true,
+    "run_at": "document_start",
+    "matches": ["<all_urls>"],
+    "js": ["dragtogo-content.js"]
+  }],
+
+  "background": {
+    "scripts": ["global.js", "dragtogo-background.js"]
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true,
+    "open_in_tab": true
+  },
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/border-48.png"
+    }
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "lite-dragtogo@cicada17"
+    }
+  }
+}
