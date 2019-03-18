@@ -110,6 +110,7 @@ const handlers = (function() {
     }
     await Promise.all(promises)
     console.log('Options updated in background.js')
+    console.log(actionPref)
   }
 
   const handleDragContent = function(message) {
@@ -168,7 +169,7 @@ const handlers = (function() {
 
   const textHandler = function(text, direction) {
     const engine = actionPref[GL.TYPE_TEXT][direction]['engine']
-    const openStylePref = actionPref[GL.TYPE_LINK][direction]['fore-back']
+    const openStylePref = actionPref[GL.TYPE_TEXT][direction]['fore-back']
     // console.log(actionPref)
     console.log(direction, openStylePref, engine, text)
     actions.search(text, openStylePref, engine)
@@ -192,7 +193,8 @@ const handlers = (function() {
     for (let keyName of keyNames) {
       const { type, direction, option } = GL.getProperties(keyName)
       actionPref[type][direction][option] = changes[keyName].newValue
-      // console.log(keyName, changes[keyName].newValue)
+      console.log(keyName, changes[keyName].newValue)
+      console.log(actionPref)
     }
     console.log('Options updated in background.js')
   }

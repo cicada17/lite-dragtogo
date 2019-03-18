@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Lite DragToGO",
-  "version": "0.8",
+  "version": "0.87",
   "homepage_url": "https://github.com/cicada17/lite-dragtogo",
   "description": "Drag text to search (in browser search engine) or link to open in foreground/background/same page... and more.",
 

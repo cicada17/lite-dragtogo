@@ -48,6 +48,7 @@ async function saveOptions(e) {
         promises.push(browser.storage.local.set({
           [keyName]: val
         }))
+        CACHE[keyName] = val
       }
     }
   }
