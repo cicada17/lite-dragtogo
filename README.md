@@ -3,4 +3,4 @@ A Firefox desktop extension for dragging gesture, e.g., dragging a link to open 
 
 ## How to install
 This extension is not listed on AMO yet. However, signed addons can be [downloaded here](https://github.com/cicada17/lite-dragtogo/releases/latest).
-To install, download and drag the xpi file to Firefox.
+To install, open .xpi file with Firefox or drag the file into Firefox.
